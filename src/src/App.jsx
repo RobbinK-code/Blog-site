@@ -1,21 +1,24 @@
-// Main App component
-// Parent component for the blog application
-// Connected to: Header, About, ArticleList
+import React from "react";
 
-import Header from "./components/Header";
-import About from "./components/About";
-import ArticleList from "./components/ArticleList";
+import Header from "./Header";
+import About from "./About";
+import ArticleList from "./ArticleList";
 
-import blog from "./data/blog";
+import blogData from "../data/blog";
+
+console.log(blogData);
 
 function App() {
   return (
-    <div>
-      <Header name={blog.name} />
+    <div className="App">
+      <Header name={blogData.name} />
 
-      <About image={blog.image} about={blog.about} />
+      <About
+        image={blogData.image}
+        about={blogData.about}
+      />
 
-      <ArticleList posts={blog.posts} />
+      <ArticleList posts={blogData.posts} />
     </div>
   );
 }
