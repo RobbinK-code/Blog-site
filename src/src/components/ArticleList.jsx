@@ -1,10 +1,6 @@
-// ArticleList component
-// Displays a list of Article components
-// Connected to: App.jsx and Article.jsx
-
 import Article from "./Article";
 
-function ArticleList({ posts }) {
+function ArticleList({ posts = [] }) {
   return (
     <main>
       {posts.map((post) => (
